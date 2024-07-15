@@ -13,12 +13,8 @@ title = {Image Segmentation Using Bayesian Inference for Convex Variant Mumfordâ
 journal = {SIAM Journal on Imaging Sciences},
 
 volume = {17},
-
 number = {1},
-
 pages = {248-272},
-
 year = {2024},
-
 doi = {10.1137/23M1545379},
 }
