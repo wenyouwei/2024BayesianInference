@@ -1,4 +1,4 @@
-function [value] = new_SA(Clean,Seg,k,th)
+function [value,new_Seg] = new_SA(Clean,Seg,k,th)
 [m,n] = size(Clean);
 Clean_index = unique(Clean);
 new_Clean = zeros(m,n);

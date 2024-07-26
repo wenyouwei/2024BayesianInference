@@ -49,8 +49,8 @@ for iter = 1:iter_max
     
     % update mu
     trace_mu = sum(sum(Sigma .* (value_Lap) .* W_u));
-    mu_traza = (Dx.^2+Dy.^2) .* W_u + abs(trace_mu)/p;
-    tmp = mu_traza.^(0.5);
+    mu_traza = (Dx.^2+Dy.^2) .* W_u + trace_mu/p;
+    tmp = mu_traza;
     mu = (p*alpha2)/(sum(tmp(:)));
     mu_array(iter) = mu;
     
@@ -79,6 +79,7 @@ for iter = 1:iter_max
     
     error = sum((x-x0).*(x-x0)) / sum(x0.*x0);
     if error < 1e-7 && iter>iter_min
+        disp(iter);
         break; 
     end
     x0 = x;
